@@ -1,4 +1,8 @@
-<% @notes.each do |note| %>
-  <b>Title : </b><%note.name%>
-  <b>Details : </b><%note.info%>
+<!DOCTYPE html>
+<body>
+  <% @notes.each do |note| %>
+  <b>Title : </b><%=note.name%><br>
+  <b>Details : </b><%=note.info%><br>
   <%end%> 
+</body>
+</html>
