@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ body{background:black;background-image:url('http://eskipaper.com/images/skyrim-logo-5.jpg');height:1200px;background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;}
