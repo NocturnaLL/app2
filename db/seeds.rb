@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Note.create(name:"Almanca", info:"wenig: dar, allein: yalnız, leiten,tut : yapmak, wichting: önemli ")
+Note.create(name:"Almanca", info:"aufstehen: kalkmak")
