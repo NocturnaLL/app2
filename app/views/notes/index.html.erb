@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <body>
+  <%= link_to "Homepage", root_path, :class => "link" %><br><br>
   <div id="notes">
+  
   <% @notes.each do |note| %>
   <b>Title : </b><%= link_to note.name, note_path(note)%><br>
   <b>Details : </b><%=note.info%><br>
   <%end%><br>
-  <%= link_to "Homepage", root_path%>
+   
   </div> 
 </body>
 </html>
