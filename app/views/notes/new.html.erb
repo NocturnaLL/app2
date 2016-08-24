@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<body>
+	<h1>New Note</h1>
+
+	<%if @note.errors.any? %>
+	<h3><%= @note.errors.full_messages.join(", ")%></h3>
+	<%end%>
+
+	<%= render partial: "form" %>
+</body>
+</html>
+
+

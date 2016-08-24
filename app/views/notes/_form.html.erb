@@ -1,0 +1,11 @@
+<%= form_for @note, method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Title...', class: "form-control input-sm" %><br>
+  <br>
+  <%= f.label :description %>
+  <br>
+  <%= f.text_area :info, placeholder: "Add a new note...", rows: 10 %><br><br>
+  <%= f.submit 'Send' %>
+<% end %><br><br>
+
+<%= link_to "Back to notes", notes_path%>
