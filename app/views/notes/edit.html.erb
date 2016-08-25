@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<%= link_to "Back to notes", notes_path, :class => "link"%><br><br>
-	<title>Editing Notes</title>
-</head>
+	<%= link_to "Back to notes", notes_path, :class => "link"%><br><br><br>
 <body>
+	<b>Editing Notes</b>
 	<%if @note.errors.any? %>
 	<h3><%= @note.errors.full_messages.join(", ")%></h3>
 	<%end%><br><br>
