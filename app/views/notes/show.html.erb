@@ -4,6 +4,8 @@
 	<div id="notes">
 	<b>Title : </b><%=@note.name%><br>
   	<b>Details : </b><%=@note.info%><br><br><br>
-  	</div> 
+  	</div>
+
+  	<%= link_to "Edit Note", edit_note_path(@note), :class => "link"%>
 </body>
 </html>

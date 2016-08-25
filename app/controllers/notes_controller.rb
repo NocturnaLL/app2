@@ -12,7 +12,7 @@ class NotesController < ApplicationController
 	end
 
 	def create
-		@note = Note.new(strong_params)
+		@note = Note.new(note_params)
 
 		if @note.save
 			redirect_to notes_path(@note)
@@ -21,7 +21,21 @@ class NotesController < ApplicationController
 		end
 	end
 
-	def strong_params
+	def edit
+		@note = Note.find(params[:id])
+	end
+
+	def update
+		@note = Note.find(params[:id])
+
+		if @note.update(note_params)
+			redirect_to note_path(@note)
+		else
+			render :edit
+		end
+	end
+
+	def note_params
 		params.require(:note).permit(:name, :info)
 	end
 end
