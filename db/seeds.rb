@@ -8,3 +8,4 @@
 
 Note.create(name:"Almanca", info:"wenig: dar, allein: yalnız, leiten,tut : yapmak, wichting: önemli ")
 Note.create(name:"Almanca", info:"aufstehen: kalkmak")
+Note.create(name:"Almanca", info:"akkusativ->Ich habe keinen katze dativ->Burak erzählt seinen Brüdern Witze.")

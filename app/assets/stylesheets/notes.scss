@@ -4,5 +4,9 @@
 
 body{color:white;}
 .notes{position:absolute;top:150px;}
-.link{display:block;height:45px;width:300px;color:#fff;font-family:helvenica;line-height:43px;text-decoration:none;transition:background 0.5s linear 0s, color 0.5s linear 0s; position:fixed;margin:1px;opacity:0.5;margin:0px 0px 0px 300px;text-align:center;opacity:0.5;background:#252525;}
+.link{display:block;height:45px;width:300px;color:#fff;font-family:helvenica;line-height:43px;text-decoration:none;transition:background 0.5s linear 0s, color 0.5s linear 0s; position:fixed;margin:1px;opacity:0.5;margin:0px 0px 0px 292px;text-align:center;opacity:0.5;background:#252525;}
+.link2{display:block;height:45px;width:300px;color:#fff;font-family:helvenica;line-height:43px;text-decoration:none;transition:background 0.5s linear 0s, color 0.5s linear 0s; position:absolute;top:141px;margin:1px;opacity:0.5;margin:0px 0px 0px -8px;text-align:center;opacity:0.5;background:#252525;}
+.link3{display:block;height:45px;width:300px;color:#fff;font-family:helvenica;line-height:43px;text-decoration:none;transition:background 0.5s linear 0s, color 0.5s linear 0s; position:absolute;top:141px;margin:1px;opacity:0.5;margin:0px 0px 0px 292px;text-align:center;opacity:0.5;background:#252525;}
 .link:hover {background:#f0300b;color:#781705;}
+.link2:hover {background:#f0300b;color:#781705;}
+.link3:hover {background:#f0300b;color:#781705;}

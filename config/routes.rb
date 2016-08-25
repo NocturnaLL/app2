@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   post 'notes', to: 'notes#create'
   get 'notes/:id/edit', to: 'notes#edit', as: "edit_note"
   put 'notes/:id', to: 'notes#update'
+  delete 'notes/:id', to: 'notes#destroy'
 end
