@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <body>
+	<%= link_to "Back to notes", notes_path, :class => "link"%><br><br><br>
 	<div id="notes">
 	<b>Title : </b><%=@note.name%><br>
   	<b>Details : </b><%=@note.info%><br><br><br>
-  	<%= link_to "Back to notes", notes_path%>
   	</div> 
 </body>
 </html>
