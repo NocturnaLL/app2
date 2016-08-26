@@ -4,7 +4,7 @@
   <div id="notes">
   
   <% @notes.each do |note| %>
-  <b>Title : </b><%= link_to note.name, note_path(note)%><br>
+  <b>Title : </b><%= link_to note.name, note_path(note), :class => "link4"%><br>
   <b>Details : </b><%=note.info%><br>
   <%end%><br>
    

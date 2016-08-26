@@ -8,10 +8,7 @@
 
   	<%= link_to "Edit Note", edit_note_path(@note), :class => "link3"%>
 
-  	<form method="post" action="<% note_path(@note) %>">
-  	<input type="hidden" name="_method" value="delete">
-    
-</form>
+  
 	<br><br>
 	<%= link_to "Sil", note_path(@note), method: :delete , :class => "link2"%>
 </body>
