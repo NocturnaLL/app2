@@ -7,10 +7,8 @@
 	<h3><%= @note.errors.full_messages.join(", ")%></h3>
 	<%end%><br><br>
 
-  <form action="<%= note_path @note %>" method="post">
-  <input type="hidden" name="_method" value="put" >
  <%= render partial: "form" %>
-	</form>
+	
 	
 </body>
 </html>
