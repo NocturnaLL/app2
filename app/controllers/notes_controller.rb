@@ -3,7 +3,7 @@ class NotesController < ApplicationController
 
 	def new
 		@note = Note.new
-		@categories = Category.all.collect {|c| [c.title, c.id ] }
+		load_categories
 	end
 
 	def index
@@ -21,7 +21,7 @@ class NotesController < ApplicationController
 			flash[:success] = 'New note successfully saved.'
 			redirect_to notes_path(@note)
 		else
-			@categories = Category.all.collect {|c| [c.title, c.id ] }
+			load_categories
 			render :new
 		end
 	end
@@ -51,5 +51,9 @@ class NotesController < ApplicationController
 
 	def set_note
 		@note = Note.find(params[:id])
+	end
+
+	def load_categories
+		@categories = Category.all.collect {|c| [c.title, c.id ] }
 	end
 end
