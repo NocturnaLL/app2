@@ -3,6 +3,7 @@ class NotesController < ApplicationController
 
 	def new
 		@note = Note.new
+		@categories = Category.all.collect {|c| [c.title, c.id ] }
 	end
 
 	def index
@@ -17,9 +18,10 @@ class NotesController < ApplicationController
 		@note = Note.new(note_params)
 
 		if @note.save
-			flash[:success] = 'Successfull'
+			flash[:success] = 'New note successfully saved.'
 			redirect_to notes_path(@note)
 		else
+			@categories = Category.all.collect {|c| [c.title, c.id ] }
 			render :new
 		end
 	end
@@ -44,7 +46,7 @@ class NotesController < ApplicationController
 	private
 
 	def note_params
-		params.require(:note).permit(:name, :info)
+		params.require(:note).permit(:name, :info, :category_id)
 	end
 
 	def set_note
