@@ -1,0 +1,6 @@
+Categories
+
+<% @categories.each do |c| %>
+	<%= link_to c.title, category_path(c) %><br>
+
+<%end%>

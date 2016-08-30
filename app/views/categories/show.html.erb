@@ -1,8 +1,8 @@
-+<h1><%= @category.title %></h1>
+<h1><%= @category.title %></h1>
 
 <% @category.notes.each do |note| %>
   <b>ID </b><%= note.id %>
   <b>Title </b>
-  <%= link_to note.title, note_path(note) %>
-  <b>Description </b><%= note.description %><br>
+  <%= link_to note.name, note_path(note) %>
+  <b>Description </b><%= note.info %><br>
 <% end %>

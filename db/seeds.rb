@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create(title:"German", desc:"Language")
-Category.create(title:"Italian", desc:"Language")
+c1=Category.create(title:"German", desc:"Language")
+c2=Category.create(title:"Italian", desc:"Language")
 
-Note.create(name:"Almanca", info:"wenig: dar, allein: yalnız, leiten,tut : yapmak, wichting: önemli ")
-Note.create(name:"Almanca", info:"aufstehen: kalkmak")
-Note.create(name:"Almanca", info:"akkusativ->Ich habe keinen katze dativ->Burak erzählt seinen Brüdern Witze.")
+
+
+Note.create(name:"Almanca", info:"wenig: dar, allein: yalnız, leiten,tut : yapmak, wichting: önemli ", category:c1)
+Note.create(name:"Almanca", info:"aufstehen: kalkmak", category:c1)
+Note.create(name:"Almanca", info:"akkusativ->Ich habe keinen katze dativ->Burak erzählt seinen Brüdern Witze.", category:c2)

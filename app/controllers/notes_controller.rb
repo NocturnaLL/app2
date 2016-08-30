@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
 	before_action :set_note, only:[:show, :edit, :update, :destroy]
 
+
 	def new
 		@note = Note.new
 		load_categories
@@ -27,13 +28,14 @@ class NotesController < ApplicationController
 	end
 
 	def edit
-		
+		load_categories
 	end
 
 	def update
 		if @note.update(note_params)
 			redirect_to note_path(@note)
 		else
+			load_categories
 			render :edit
 		end
 	end
