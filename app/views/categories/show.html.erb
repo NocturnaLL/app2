@@ -1,8 +1,10 @@
+<%= link_to "Categories", categories_path, :class => "link" %>
 <h1><%= @category.title %></h1>
 
 <% @category.notes.each do |note| %>
-  <b>ID </b><%= note.id %>
-  <b>Title </b>
-  <%= link_to note.name, note_path(note) %>
-  <b>Description </b><%= note.info %><br>
+  
+  <b>Name: </b>
+  <%= link_to note.name, note_path(note),:class => "link4" %>
+  <%= note.info %><br><br>
 <% end %>
+

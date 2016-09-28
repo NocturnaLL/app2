@@ -1,6 +1,8 @@
-Categories
+
+<%= link_to "Homepage", root_path, :class => "link" %><br><br>
 
 <% @categories.each do |c| %>
-	<%= link_to c.title, category_path(c) %><br>
+	<%= link_to c.title, category_path(c), :class => "link4" %><br>
 
 <%end%>
+

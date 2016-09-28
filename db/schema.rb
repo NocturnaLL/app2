@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827182548) do
+ActiveRecord::Schema.define(version: 20160928210459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20160827182548) do
     t.index ["title"], name: "index_categories_on_title", unique: true, using: :btree
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["note_id"], name: "index_comments_on_note_id", using: :btree
+  end
+
   create_table "notes", force: :cascade do |t|
     t.string   "name"
     t.text     "info"
@@ -31,5 +39,6 @@ ActiveRecord::Schema.define(version: 20160827182548) do
     t.integer  "category_id"
   end
 
+  add_foreign_key "comments", "notes"
   add_foreign_key "notes", "categories"
 end
